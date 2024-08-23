@@ -1,3 +1,4 @@
+
 from fastapi import Response,FastAPI, HTTPException, Depends, status
 from pydantic import BaseModel
 from typing import Annotated
@@ -5,6 +6,7 @@ import models
 from database import engine, session
 from sqlalchemy.orm import Session
 import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI()
